@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {Geist, Geist_Mono} from"next/font/google";
 import Link from"next/link";
-import image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -41,6 +40,8 @@ export default function RootLayout({
           </nav>
         </header>
         { children }
+        <hr></hr>
+        <footer className="text-center text-2xl m-7">Veloz@gmail.com</footer>
       </body>
     </html>
   )
