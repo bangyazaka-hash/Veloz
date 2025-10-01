@@ -18,6 +18,10 @@ export default function Home() {
     ~yazaka
   </p>
             </div>
+        <div className="w-[500] items-start justify-between p-5">
+            <h1 className="flex font-[kadwa] m-20 text-6xl text-justify">HOT SALE!</h1>
+            
+        </div>
         </div>
     );
 };

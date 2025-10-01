@@ -29,19 +29,22 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="bg-[#F3C623] h-12 flex items-center justify-between px-4">
-          <h1 className="font-bold h-6 flex items-center px-2 text-2xl">Veloz</h1>
+          <h1 className="font-bold h-6 flex items-center px-2 text-2xl">Véloz</h1>
           <nav className="flex justify-end space-4 gap-4">
             <div className="font-bold text-lg, flex space-x-4">
             <Link href="/">Home</Link>
-            <Link href="/Frame">Frame</Link>
+            <div className="relative group"><Link href="/Frame">Frame</Link>
+            <div className="absolute hidden group-hover:block bg-gray-900 z-10"></div>
             <Link href="/About">About</Link>
             <Link href="/Contact">Contact Us</Link>
+            </div>
             </div>
           </nav>
         </header>
         { children }
+        <div className="absolute inset-x-0 bottom-0 h-16 ... p-3"></div>
         <hr></hr>
-        <footer className="text-center text-2xl m-7">Veloz@gmail.com</footer>
+        <footer className="space-4 gap-4 text-center">Veloz@gmail.com</footer>
       </body>
     </html>
   )
