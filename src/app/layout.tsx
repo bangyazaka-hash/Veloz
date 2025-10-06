@@ -33,12 +33,19 @@ export default function RootLayout({
           <nav className="flex justify-end space-4 gap-4">
             <div className="font-bold text-lg, flex space-x-4">
             <Link href="/">Home</Link>
-            <div className="relative group"><Link href="/Frame">Frame</Link>
-            <div className="absolute hidden group-hover:block bg-gray-900 z-10"></div>
+
+            <div className="relative group"><Link href="#">Frame</Link>
+              <div className="absolute hidden group-hover:block bg-white z-10">
+                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Frame">Frame</Link></div>
+                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Wheel">Wheel</Link></div>
+                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Component">Component</Link></div>
+              </div>
+
+            </div>
             <Link href="/About">About</Link>
             <Link href="/Contact">Contact Us</Link>
             </div>
-            </div>
+            
           </nav>
         </header>
         { children }

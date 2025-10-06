@@ -7,7 +7,7 @@ export default function Home() {
             <div className="relative w-full h-[250px]">
                 
                 <Image
-                src="/gng.png"
+                src="/black.jpg"
                 alt="Home"
                 fill
                 className="object-cover"
