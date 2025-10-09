@@ -19,7 +19,7 @@ export default function Home() {
                         src="/first.png"
                         alt="Detail"
                         fill
-                        className="bg-[#F7F7F7] ml-85 mt-79 bg-[F7F7F7] rounded-2xl"
+                        className="bg-[#FAF8F1] ml-85 mt-79 rounded-2xl"
         />
         </div>
 
@@ -29,7 +29,7 @@ export default function Home() {
                         src="/sworks.png"
                         alt="Datail"
                         fill
-                        className="ml-185 mt-29 bg-[F7F7F7] rounded-xl card"
+                        className="ml-185 mt-29 rounded-xl card"
         />
         </div>
 
@@ -39,7 +39,7 @@ export default function Home() {
                         src="/time.png"
                         alt="Datail"
                         fill
-                        className="flex ml-290 bg-[F7F7F7] rounded-xl mt-[-130]"
+                        className="flex ml-290  ounded-xl mt-[-130]"
         />
         </div>
 
