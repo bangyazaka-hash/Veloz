@@ -13,13 +13,14 @@ export default function Home() {
                 className="object-cover"
 />
 
+
           <div className="relative w-70 h-50">
-                        
+            
                         <Image
                         src="/first.png"
                         alt="Detail"
                         fill
-                        className="bg-[#FAF8F1] ml-85 mt-79 rounded-2xl"
+                        className="bg-[#FFFFFF] shadow-lg ml-85 mt-79 rounded-2xl"
         />
         </div>
 
@@ -29,17 +30,17 @@ export default function Home() {
                         src="/sworks.png"
                         alt="Datail"
                         fill
-                        className="ml-185 mt-29 rounded-xl card"
+                        className="bg-[#FFFFFF] shadow-lg ml-167 mt-29 rounded-2xl"
         />
         </div>
 
-        <div className="relative w-80 h-80">
-                        
+        <div className="relative w-70 h-50">
+        
                         <Image
-                        src="/time.png"
+                        src="/giant.png"
                         alt="Datail"
                         fill
-                        className="flex ml-290  ounded-xl mt-[-130]"
+                        className="bg-[#FFFFFF] hover:bg-gray-100 shadow-lg ml-250 mt-[-85] rounded-xl"
         />
         </div>
 
@@ -50,7 +51,8 @@ export default function Home() {
   </p>
             </div>
         <div className="w-[500] items-start justify-between p-5">
-            <h1 className="flex font-[kadwa] m-20 text-6xl text-justify">HOT SALE!</h1>
+            <h1 className="flex font-[kadwa] ml-10 mt-25 text-6xl text-justify">HOT<br />
+            SALE!</h1>
             
         </div>
         </div>

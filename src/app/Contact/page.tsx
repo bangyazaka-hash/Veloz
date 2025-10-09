@@ -13,6 +13,18 @@ export default function about() {
   </p>
 
   </div>
+  
+            <div className="relative">
+                <div className="bg-[#FFFFFF] shadow-lg w-50 h-60 ml-230 mt-30 rounded-xl"></div>
+                <Image 
+                src="/bar.png"
+                alt="Contact"
+                width="200"
+                height="200"
+                className="ml-230 mt-[-250]"
+/>
+        </div>
+
         <div className="w-240">
   <Image 
                 src="/gmail.png"
@@ -51,18 +63,6 @@ export default function about() {
 <h3 className="absolute inset-y-0 left-45 w-11 mt-128">@Yazaka.</h3>
 
 </div>
-
-
-            <div className="w-100">
-                
-                <Image 
-                src="/bar.png"
-                alt="Contact"
-                width={280}
-                height={280}
-                className="object-contain h-130 flex-box"
-/>
-        </div>
 </div>
         
     );

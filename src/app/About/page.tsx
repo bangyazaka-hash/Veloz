@@ -15,7 +15,6 @@ export default function about() {
 
   </div>
             <div className="w-100">
-                
                 <Image 
                 src="/contact.png"
                 alt="About"

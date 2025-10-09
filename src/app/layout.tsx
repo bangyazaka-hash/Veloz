@@ -50,9 +50,8 @@ export default function RootLayout({
         </header>
         { children }
         <div className="absolute inset-x-0 bottom-0 h-16 p-3"></div>
-        <hr></hr>
-        <footer className="mt-10 space-4 gap-4 text-center bg-black text-white">Veloz@gmail.com</footer>
       </body>
+      <footer className="mt-40 text-center bg-black text-white">Veloz@gmail.com</footer>
     </html>
   )
 
