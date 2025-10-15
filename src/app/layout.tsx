@@ -34,7 +34,7 @@ export default function RootLayout({
             <div className="font-bold text-lg, flex space-x-4">
             <Link href="/">Home</Link>
 
-            <div className="relative group"><Link href="#">Catalog</Link>
+            <div className="relative group"><Link href="/">Catalog</Link>
               <div className="absolute hidden group-hover:block bg-white z-10">
                 <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Frame">Frame</Link></div>
                 <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Wheel">Wheel</Link></div>
@@ -51,7 +51,6 @@ export default function RootLayout({
         { children }
         <div className="absolute inset-x-0 bottom-0 h-16 p-3"></div>
       </body>
-      <footer className="mt-40 text-center bg-black text-white">Veloz@gmail.com</footer>
     </html>
   )
 
