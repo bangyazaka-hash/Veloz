@@ -25,6 +25,7 @@ export default function Frame() {
                                     className="object-contain mt-10 ml-35"
                     />
                     <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
+                    <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
             </div>  
             </div>
 
@@ -36,6 +37,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain mt-10 ml-35"
                     />
+                      <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
+                      <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
             </div>  
             </div>
 
@@ -47,6 +50,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain mt-10 ml-35"
                     />
+                      <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
+                      <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
             </div>  
             </div>
 
@@ -58,6 +63,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain mt-10 ml-35"
                     />
+                      <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
+                      <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
             </div>  
             </div>
 
@@ -69,6 +76,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain mt-10 ml-35"
                     />
+                      <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
+                      <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
             </div>  
             </div>
 

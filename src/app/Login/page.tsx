@@ -1,4 +1,4 @@
-import Image from "next/image" ; 
+﻿import Image from "next/image" ; 
 
     export default function login() {
 
@@ -15,13 +15,21 @@ import Image from "next/image" ;
                 
             </div>
 
-    <div className="w-15 h-15">
+    <div className="relative w-[100px] h-[100px]">
                 <Image
                 src="/veloz.png"
                 alt="Login"
                 fill
-                className="w-15 h-15 mt-20 ml-50"
+                className="object-contain ml-70 mt-[-100]"
                 />
+                <div className="font-bold text-2xl ml-64 w-200">Ride To Work</div>
+                <div className="text-xl ml-32 text-center mt-3 w-100">Ini adalah halaman login khusus admin jika kamu user mohon kembalilah ke halaman home</div>
+                
+                <div>
+                    <textarea
+                    value="text"
+                    />
+                </div>
             </div>
             </div>
         )
