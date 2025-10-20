@@ -18,6 +18,7 @@ export default function detail () {
     <h1 className="font-bold text-red-500 text-xl mt-90 ml-[-70]">Rp.2.000.000</h1>
             </div>
 
+
              <div className="bg-[#F0F0F0] w-100 h-120 rounded-2xl shadow-lg ml-200 p-5"></div>
 
     </div>

@@ -51,11 +51,11 @@ export default function RootLayout({
         { children }
         <div className="absolute inset-x-0 bottom-0 h-16 p-3"></div>
 
-        <footer className="relative"><hr className="mt-20"></hr>
+        <footer className="relative"><hr className="mt-50"></hr>
         <div className="bg-[#f3c623] w-20 h-10 m-5 rounded-full ml-30">
           <h1 className="flex font-bold text-lg ml-2 text-center p-1">Veloz</h1>
           <h1 className="font-bold w-50 ml-25 mt-[-30] ">Reach Your Max Speed</h1>
-          <p className="w-70 mt-5">Kurasi sepeda dan aksesoris premium dengan layanan personal, konsultasi, dan dukungan after-sales untuk setiap jenis rider.</p>
+          <p className="w-70 mt-5 text-justify">Veloz adalah sebuah website catalog sepeda namun juga menyediakan barangnya, semua pemesanan dialihkan ke whatsapp</p>
           </div>
           <div className="relative ml-160 mt-[-50]">
           <h1 className="font-bold">Navigation</h1>
@@ -67,11 +67,11 @@ export default function RootLayout({
 
           <div className="relative ml-250 mt-[-120]">
           <h1 className="font-bold">Hubungi kami</h1>
-          <div className="relative"><Link href="/">Jl.Pangauban Kec.Katapang</Link></div>
-          <div className="relative"><Link href="Frame">Veloz@gmail.com</Link></div>
-          <div className="relative"><Link href="Wheel">Whatsapp : 0895411959084</Link></div>
-          <div className="relative"><Link href="Component">Tiktok</Link></div>
-          <div className="relative"><Link href="Component">Instagram</Link></div>
+          <div className="relative">Jl.Pangauban Kec.Katapang</div>
+          <div className="relative">Veloz@gmail.com</div>
+          <div className="relative">Whatsapp : 0895411959084</div>
+          <div className="relative">Tiktok</div>
+          <div className="relative">Instagram</div>
           </div>    
         </footer>
       </body>

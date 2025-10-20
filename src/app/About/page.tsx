@@ -14,15 +14,18 @@ export default function about() {
   </p>
 
   </div>
-            <div className="w-100">
-                <Image 
-                src="/contact.png"
-                alt="About"
-                width={280}
-                height={280}
-                className="object-contain h-130"
-/>
 
+        <div className="bg-[#FFFFFF] shadow-lg w-70 h-20 mt-100 ml-[-400] rounded-xl"></div>
+        <div className="bg-[#FFFFFF] shadow-lg w-70 h-20 mt-100 ml-[-100] rounded-xl"></div>
+              <div className="relative justify-center w-90 h-90">
+                       <div className="bg-[#f3c623] w-60 h-90 shadow-lg ml-[-120] mt-25 p-5">
+                        <Image
+                                src="/contact.png"
+                                alt="Detail"
+                                fill
+                                className="object-contain mt-20 ml-[-120]"
+                               />
+        </div>
         </div>
         </div>
 
