@@ -13,7 +13,6 @@ export default function Home() {
                 className="object-cover"
 />
 
-
           <div className="relative w-70 h-50">
             
                         <Image
@@ -44,12 +43,19 @@ export default function Home() {
         />
         </div>
 
-<p className="absolute bottom-4 left-x15 -translate-x p-3 m-20 text-white  px-4 py-2 text-centre">
+<p className="absolute bottom-4 left-x15 -translate-x p-3 m-20 text-white px-4 py-2 text-centre">
     Bersepeda bukanlah sekedar berolahraga <br />
     namun bisa juga untuk mengekspresikan suasana hati kita.<br />
     ~yazaka
   </p>
+
+  <div className="absolute ml-50 mt-[-400]">
+    <div className="bg-white w-25 h-8 rounded-full shadow-lg">
+            <p className="font-semibold text-center py-1">Catalog</p>
+        </div>
+        </div>
             </div>
+
         <div className="w-[500] items-start justify-between p-5">
             <h1 className="flex font-[kadwa] ml-10 mt-25 text-6xl text-justify">HOT<br />
             SALE!</h1>

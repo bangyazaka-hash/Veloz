@@ -25,11 +25,7 @@
                 <div className="font-bold text-2xl ml-64 w-200">Ride To Work</div>
                 <div className="text-xl ml-32 text-center mt-3 w-100">Ini adalah halaman login khusus admin jika kamu user mohon kembalilah ke halaman home</div>
                 
-                <div>
-                    <textarea
-                    value="text"
-                    />
-                </div>
+            
             </div>
             </div>
         )
