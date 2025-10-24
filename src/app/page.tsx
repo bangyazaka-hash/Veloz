@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -45,11 +46,10 @@ export default function Home() {
 
 <p className="absolute bottom-4 left-x15 -translate-x p-3 m-20 text-white px-4 py-2 text-centre">
     Bersepeda bukanlah sekedar berolahraga <br />
-    namun bisa juga untuk mengekspresikan suasana hati kita.<br />
-    ~yazaka
+    namun bisa juga untuk mengekspresikan suasana hati kita.
   </p>
 
-  <div className="absolute ml-50 mt-[-400]">
+  <div className="absolute ml-25 mt-[-445]">
     <div className="bg-white w-25 h-8 rounded-full shadow-lg">
             <p className="font-semibold text-center py-1">Catalog</p>
         </div>

@@ -17,7 +17,18 @@ export default function Home() {
     namun bisa juga untuk mengekspresikan suasana hati kita.<br />
     ~yazaka
   </p>
-            </div>
+    
+            <div className="relative w-70 h-50">
+                                    
+                                    <Image
+                                    src="/sworks.png"
+                                    alt="Datail"
+                                    fill
+                                    className="bg-[#FFFFFF] w-50 h-90 shadow-lg ml-167 mt-29 rounded-2xl"
+                    />
+                    </div>
+            
         </div>
+            </div>
     );
 };
