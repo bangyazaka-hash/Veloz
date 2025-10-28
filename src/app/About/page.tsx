@@ -16,8 +16,12 @@ export default function about() {
   </div>
 
          <h1 className="font-bold text-2xl ml-[-500] mt-100">Perjalanan Kami</h1>
-        <div className="bg-[#FFFFFF] shadow-lg w-70 h-20 mt-120 ml-[-500] rounded-xl"></div>
-        <div className="bg-[#FFFFFF] shadow-lg w-70 h-20 mt-120 ml-[-100] rounded-xl"></div>
+        <div className="bg-[#FFFFFF] shadow-lg w-100 h-20 mt-120 ml-[-250] rounded-xl">
+            <div className="bg-[#f3c623] shadow-lg rounded-full w-20 py-2 mt-5 ml-3">
+                <p className="font-semibold ml-5">2025</p>
+            </div>
+            <p className="leading-relaxed text-justify w-70 ml-25 mt-[-45]">Berawal dari membaca manhwa kini menjadi toko sepeda.</p>
+        </div>
               <div className="relative justify-center w-90 h-90">
                        <div className="bg-[#f3c623] w-70 h-90 shadow-lg ml-[-120] mt-25 p-5">
                         <Image
