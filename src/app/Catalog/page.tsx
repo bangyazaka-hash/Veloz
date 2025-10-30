@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
 
     return (
@@ -17,18 +17,53 @@ export default function Home() {
     namun bisa juga untuk mengekspresikan suasana hati kita.<br />
     ~yazaka
   </p>
+  </div>
     
-            <div className="relative w-70 h-50">
-                                    
-                                    <Image
-                                    src="/sworks.png"
-                                    alt="Datail"
-                                    fill
-                                    className="bg-[#FFFFFF] w-50 h-90 shadow-lg ml-167 mt-29 rounded-2xl"
+           <div className="flex flex-row justify-center flex-wrap mt-35 gap-20">
+            <div className="bg-[#FFFFFF] w-60 h-70 shadow-lg rounded-2xl z-10">
+                 <Image
+                    src="/dolan.png"
+                    alt="Detail"
+                    width={250}
+                    height={250}
                     />
-                    </div>
+                <div className="bg-[#f3c623] w-50 h-10 ml-5 mt-15 shadow-lg rounded-2xl z-10">
+                    <Link href="/Frame">
+                      <p className="text-center font-semibold py-1">FrameSet</p>
+                    </Link>                
+                </div>
+            </div>
+
+             <div className="bg-[#FFFFFF] w-60 h-70 shadow-lg rounded-2xl z-10">
+                 <Image
+                    src="/mavic.png"
+                    alt="Detail"
+                    width={250}
+                    height={250}
+                    />
+                <div className="bg-[#f3c623] w-50 h-10 ml-5 mt-10 shadow-lg rounded-2xl z-10">
+                    <Link href="/Wheel">
+                      <p className="text-center font-semibold py-1">WheelSet</p>
+                    </Link>
+                </div>
+            </div>
+
+             <div className="bg-[#FFFFFF] w-60 h-70 shadow-lg rounded-2xl z-10">
+                 <Image
+                    src="/chain.png"
+                    alt="Detail"
+                    width={250}
+                    height={250}
+                    />
+                <div className="bg-[#f3c623] w-50 h-10 ml-5 mt-5 shadow-lg rounded-2xl z-10">
+                    <Link href="/Component">
+                    <p className="text-center font-semibold py-1">Component</p>
+                    </Link>
+                </div>
+            </div>
+           </div>
             
-        </div>
+
             </div>
     );
 };

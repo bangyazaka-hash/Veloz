@@ -48,12 +48,13 @@ export default function Home() {
     Bersepeda bukanlah sekedar berolahraga <br />
     namun bisa juga untuk mengekspresikan suasana hati kita.
   </p>
-
+<Link href="/Catalog">
   <div className="absolute ml-25 mt-[-445]">
     <div className="bg-white w-25 h-8 rounded-full shadow-lg">
             <p className="font-semibold text-center py-1">Catalog</p>
         </div>
         </div>
+        </Link>
             </div>
 
         <div className="w-[500] items-start justify-between p-5">

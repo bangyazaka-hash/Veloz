@@ -35,7 +35,7 @@ export default function RootLayout({
             <h1 className="font-bold h-6 flex items-center px-2 text-2xl">Véloz</h1>
             <div className="flex absolute right-0 gap-4 ">
             <Link href="/">Home</Link>
-            <div className="relative group"><Link href="/">Catalog</Link>
+            <div className="relative group"><Link href="/Catalog">Catalog</Link>
               <div className="absolute hidden group-hover:block bg-white z-10">
                 <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Frame">Frame</Link></div>
                 <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Wheel">Wheel</Link></div>
