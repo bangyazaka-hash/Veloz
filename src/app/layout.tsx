@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });  
 
 export const metadata: Metadata =  {
-  title: "Created next app",
-  description: "Generate by create next app"
+  title: "Véloz",
+  description: "Generate by arka putra yazaka"
 };
 
 export default function RootLayout({
@@ -50,9 +50,9 @@ export default function RootLayout({
           </nav>
         </header>
         { children }
-        <div className="absolute inset-x-0 bottom-0 h-16 p-3"></div>
+        <div className="inset-x-0 bottom-0 h-16 p-3"></div>
 
-        <footer className="relative"><hr className="mt-50"></hr>
+        <footer className="relative"><hr className="mt-30"></hr>
         <div className="bg-[#f3c623] w-20 h-10 m-5 rounded-full ml-30">
           <h1 className="flex font-bold text-lg ml-2 text-center p-1">Veloz</h1>
           <h1 className="font-bold w-50 ml-25 mt-[-30] ">Reach Your Max Speed</h1>
@@ -71,9 +71,11 @@ export default function RootLayout({
           <div className="relative">Jl.Pangauban Kec.Katapang</div>
           <div className="relative">Veloz@gmail.com</div>
           <div className="relative">Whatsapp : 0895411959084</div>
+          <div className="flex flex-row gap-5">
           <div className="relative">Tiktok</div>
           <div className="relative">Instagram</div>
-          </div>    
+          </div>
+          </div>
         </footer>
       </body>
     </html>
