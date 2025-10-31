@@ -26,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+      
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       
         <header className="bg-[#f3c623] shadow-lg h-12 flex items-center justify-between px-4">

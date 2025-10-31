@@ -35,7 +35,7 @@ export default function Frame() {
            <div className="relative justify-center w-50 h-50">
             <div className="bg-[#FFFFFF] w-60 h-70 rounded-2xl shadow-lg m-10 ml-30 p-5">
              <Image
-                                    src="/dolan.png"
+                                    src="/tsunamisnm100.png"
                                     alt="Detail"
                                     fill
                                     className="object-contain mt-10 ml-35"
@@ -48,7 +48,7 @@ export default function Frame() {
               <div className="relative justify-center w-50 h-50">
             <div className="bg-[#FFFFFF] w-60 h-70 rounded-2xl shadow-lg m-10 ml-30 p-5">
              <Image
-                                    src="/dolan.png"
+                                    src="/time.png"
                                     alt="Detail"
                                     fill
                                     className="object-contain mt-10 ml-35"
@@ -61,7 +61,7 @@ export default function Frame() {
                   <div className="relative justify-center w-50 h-50">
             <div className="bg-[#FFFFFF] w-60 h-70 rounded-2xl shadow-lg m-10 ml-30 p-5">
              <Image
-                                    src="/dolan.png"
+                                    src="/sworks.png"
                                     alt="Detail"
                                     fill
                                     className="object-contain mt-10 ml-35"
@@ -74,7 +74,7 @@ export default function Frame() {
                <div className="relative justify-center w-50 h-50">
             <div className="bg-[#FFFFFF] w-60 h-70 rounded-2xl shadow-lg m-10 ml-30 p-5">
              <Image
-                                    src="/dolan.png"
+                                    src="/giant.png"
                                     alt="Detail"
                                     fill
                                     className="object-contain mt-10 ml-35"
