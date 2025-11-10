@@ -26,8 +26,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain ml-35"
                     />
-                    <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
-                    <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
+                    <div className="text-xl mt-40">Frameset Dolan</div>
+                    <div className="font-bold text-red-500 text-xl mt-7">Rp.2.000.000</div>
             </div>  
             </div>
             </Link>
@@ -40,8 +40,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain mt-10 ml-35"
                     />
-                      <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
-                      <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
+                      <div className="text-xl mt-40">Frameset Tsunami</div>
+                      <div className="font-bold text-red-500 text-xl mt-7">Rp.2.000.000</div>
             </div>  
             </div>
 
@@ -53,8 +53,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain mt-10 ml-35"
                     />
-                      <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
-                      <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
+                      <div className="text-xl mt-40">Frameset Time</div>
+                      <div className="font-bold text-red-500 text-xl mt-7">Rp.2.000.000</div>
             </div>  
             </div>
 
@@ -66,8 +66,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain mt-10 ml-35"
                     />
-                      <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
-                      <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
+                      <div className="text-xl mt-40">Frameset S-works</div>
+                      <div className="font-bold text-red-500 text-xl mt-7">Rp.2.000.000</div>
             </div>  
             </div>
 
@@ -79,8 +79,8 @@ export default function Frame() {
                                     fill
                                     className="object-contain mt-10 ml-35"
                     />
-                      <div className="text-xl mt-40">Frameset Tsunami SNM 100</div>
-                      <div className="font-bold text-red-500 text-xl">Rp.2.000.000</div>
+                      <div className="text-xl mt-40">Frameset giant</div>
+                      <div className="font-bold text-red-500 text-xl mt-7">Rp.2.000.000</div>
             </div>  
             </div>
 
