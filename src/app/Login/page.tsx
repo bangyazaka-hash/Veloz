@@ -7,7 +7,15 @@ export default function LoginPage() {
       
       <div className="w-1/2 bg-[#f3c623] flex flex-col items-center justify-center text-black">
        
-        <h1 className="text-2xl font-bold mt-4">Ride To Work</h1>
+        <Image
+                                       src="/veloz.png"
+                                       alt="Login"
+                                       width={150}
+                                       height={150}
+                                       className="flex"
+                                      />
+        <h1 className="text-2xl font-bold mt-4">Reach Your Max Speed</h1>
+        <p className="w-70 text-center">Selamat datang di halaman admin. Jika anda adalah user silahkan kembali ke halaman utama</p>
       </div>
 
       <div className="w-1/2 bg-white flex flex-col justify-center items-center">
