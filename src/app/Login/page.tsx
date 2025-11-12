@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import Link from "next/link"
 
 export default function LoginPage() {
     
@@ -8,12 +9,12 @@ export default function LoginPage() {
       <div className="w-1/2 bg-[#f3c623] flex flex-col items-center justify-center text-black">
        
         <Image
-                                       src="/veloz.png"
-                                       alt="Login"
-                                       width={150}
-                                       height={150}
-                                       className="flex"
-                                      />
+              src="/veloz.png"
+              alt="Login"
+              width={150}
+              height={150}
+              className="flex"
+              />
         <h1 className="text-2xl font-bold mt-4">Reach Your Max Speed</h1>
         <p className="w-70 text-center">Selamat datang di halaman admin. Jika anda adalah user silahkan kembali ke halaman utama</p>
       </div>
@@ -33,10 +34,12 @@ export default function LoginPage() {
             placeholder="Password"
             className="rounded-full p-3 bg-gray-100 outline-none shadow-sm"
           />
-
-          <button className="rounded-full py-3 bg-[#f3c623] shadow-md font-semibold">
+          <Link href="/Admin">
+          <button className="rounded-full py-3 bg-[#f3c623] w-full shadow-md font-semibold">
             Confirm
           </button>
+          </Link>
+          
         </div>
       </div>
     </div>
