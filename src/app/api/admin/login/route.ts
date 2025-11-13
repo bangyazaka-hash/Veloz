@@ -9,22 +9,21 @@ export async function POST(req: Request) {
     const { username, password } = await req.json();
 
     const admin = await prisma.admin.findUnique({
-      where : { username },
+      where: { username },
     });
 
     if (!admin) {
-      return NextResponse.json({ error: "Username tidak ditemukan" }, { status: 404 });
+      return NextResponse.json({ error: "Username tidak ditemukan" }, { status: 401 });
     }
 
-    const validPassword = await bcrypt.compare(password, admin.password);
-
-    if (!validPassword) {
+    const passwordMatch = bcrypt.compareSync(password, admin.password);
+    if (!passwordMatch) {
       return NextResponse.json({ error: "Password salah" }, { status: 401 });
     }
 
-    return NextResponse.json({ message: "Login berhasil", admin: admin.username });
+    return NextResponse.json({ success: true, message: "Login berhasil" });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ error: "Terjadi kesalahan di server" }, { status: 500 });
+    return NextResponse.json({ error: "Terjadi kesalahan" }, { status: 500 });
   }
 }
