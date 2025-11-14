@@ -10,7 +10,7 @@ return ( <div className="min-h-screen bg-white">
   <div className="p-6 flex justify-between items-center">
     <div className="text-3xl font-bold">Daftar Wheel</div>
     <button className="flex items-center gap-2 text-lg font-semibold text-gray-700 hover:opacity-70">
-      <span className="text-xl">+</span> Tambah Kategori Wheel
+      <span className="text-xl">+</span> Tambah Wheel
     </button>
   </div>
 
