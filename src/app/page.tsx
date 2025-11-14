@@ -58,7 +58,7 @@ export default function Home() {
             </div>
 
         <div className="w-[500] items-start justify-between p-5">
-            <h1 className="flex font-[kadwa] ml-10 mt-25 text-6xl text-justify">HOT<br />
+            <h1 className="flex font-[lexend] ml-10 mt-25 text-6xl text-justify">HOT<br />
             SALE!</h1>
             
         </div>

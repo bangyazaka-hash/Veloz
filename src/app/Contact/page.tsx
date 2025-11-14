@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function about() {
 
@@ -47,7 +48,7 @@ export default function about() {
                 className="absolute inset-y-0 left-28 w-13 mt-108"
 /> 
 
-  <h3 className="absolute inset-y-0 left-45 w-11 mt-112">@yzakaa_</h3>
+  <h3 className="absolute inset-y-0 left-45 w-11 mt-112"><Link href="https://www.instagram.com/yzakaa_?igsh=bW15YXVvdGJwY21o">@yzakaa_</Link></h3>
 
 </div>
 
@@ -60,7 +61,7 @@ export default function about() {
                 className="absolute inset-y-0 left-30 mt-125"
 /> 
 
-<h3 className="absolute inset-y-0 left-45 w-11 mt-128">@Yazaka.</h3>
+<h3 className="absolute inset-y-0 left-45 w-11 mt-128"><Link href="https://www.tiktok.com/@yazaka37?_r=1&_t=ZS-91No59d2nma">@Yazaka.</Link></h3>
 
 </div>
 </div>

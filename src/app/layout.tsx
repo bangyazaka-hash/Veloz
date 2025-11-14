@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import {Geist, Geist_Mono} from"next/font/google";
+import { Geist_Mono } from"next/font/google";
+import { Lexend } from "next/font/google";
 import Link from"next/link";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lexend = Lexend({
+  variable: "--font-Lexend",
   subsets: ["latin"],
 });
 
@@ -27,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
       
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      className={`${lexend.variable} ${geistMono.variable} antialiased`}>
       
         <header className="bg-[#f3c623] shadow-lg h-12 flex items-center justify-between px-4">
           <nav className="flex justify-end space-4 gap-4">
@@ -57,7 +58,7 @@ export default function RootLayout({
         <div className="bg-[#f3c623] w-20 h-10 m-5 rounded-full ml-30">
           <h1 className="flex font-bold text-lg ml-2 text-center p-1">Veloz</h1>
           <h1 className="font-bold w-50 ml-25 mt-[-30] ">Reach Your Max Speed</h1>
-          <p className="w-70 mt-5 text-justify">Veloz adalah sebuah website catalog sepeda namun juga menyediakan barangnya, semua pemesanan dialihkan ke whatsapp</p>
+          <p className="w-70 mt-5 text-justify">Veloz adalah sebuah web yang menyediakan catalog sepeda disebuah toko. Web ini hanya menampilkan sepeda yang tersedia di toko owner.</p>
           </div>
           <div className="relative ml-160 mt-[-50]">
           <h1 className="font-bold">Navigation</h1>
@@ -70,11 +71,11 @@ export default function RootLayout({
           <div className="relative ml-250 mt-[-120]">
           <h1 className="font-bold">Hubungi kami</h1>
           <div className="relative">Jl.Pangauban Kec.Katapang</div>
-          <div className="relative">Veloz@gmail.com</div>
-          <div className="relative">Whatsapp : 0895411959084</div>
+          <div className="relative">velozstore@gmail.com</div>
+          <div className="relative"><Link href="https://wa.me/qr/6CAEMBCFK3XVK1">Whatsapp</Link> : 0895411959084</div>
           <div className="flex flex-row gap-5">
-          <div className="relative">Tiktok</div>
-          <div className="relative">Instagram</div>
+          <div className="relative"><Link href="https://www.tiktok.com/@yazaka37?_r=1&_t=ZS-91No59d2nma">Tiktok</Link></div>
+          <div className="relative"><Link href="https://www.instagram.com/yzakaa_?igsh=bW15YXVvdGJwY21o">Instagram</Link></div>
           </div>
           </div>
         </footer>
