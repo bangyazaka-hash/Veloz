@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${lexend.variable} ${geistMono.variable} antialiased`}>
       
         <header className="bg-[#f3c623] shadow-lg h-12 flex items-center justify-between px-4">
-          <nav className="flex justify-end space-4 gap-4">
+          <nav className="flex font-[lexend] justify-end space-4 gap-4">
             <div className="font-bold text-lg, flex space-x-4">
               <hr></hr>
             <h1 className="font-bold h-6 flex items-center px-2 text-2xl">Véloz</h1>
@@ -54,9 +54,9 @@ export default function RootLayout({
         { children }
         <div className="inset-x-0 bottom-0 h-16 p-3"></div>
 
-        <footer className="relative"><hr className="mt-30"></hr>
+        <footer className="relative font-[lexend]"><hr className="mt-30"></hr>
         <div className="bg-[#f3c623] w-20 h-10 m-5 rounded-full ml-30">
-          <h1 className="flex font-bold text-lg ml-2 text-center p-1">Veloz</h1>
+          <h1 className="flex font-bold text-lg text-center py-1 ml-4">Véloz</h1>
           <h1 className="font-bold w-50 ml-25 mt-[-30] ">Reach Your Max Speed</h1>
           <p className="w-70 mt-5 text-justify">Veloz adalah sebuah web yang menyediakan catalog sepeda disebuah toko. Web ini hanya menampilkan sepeda yang tersedia di toko owner.</p>
           </div>
@@ -71,7 +71,7 @@ export default function RootLayout({
           <div className="relative ml-250 mt-[-120]">
           <h1 className="font-bold">Hubungi kami</h1>
           <div className="relative">Jl.Pangauban Kec.Katapang</div>
-          <div className="relative">velozstore@gmail.com</div>
+          <div className="relative">yourveloz@gmail.com</div>
           <div className="relative"><Link href="https://wa.me/qr/6CAEMBCFK3XVK1">Whatsapp</Link> : 0895411959084</div>
           <div className="flex flex-row gap-5">
           <div className="relative"><Link href="https://www.tiktok.com/@yazaka37?_r=1&_t=ZS-91No59d2nma">Tiktok</Link></div>

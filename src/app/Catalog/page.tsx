@@ -12,14 +12,14 @@ export default function Home() {
                 fill
                 className="object-cover"
 />
-<p className="absolute bottom-4 left-x15 -translate-x p-3 m-20 text-white  px-4 py-2 rounded text-centre">
+<p className="absolute font-[lexend] bottom-4 left-x15 -translate-x p-3 m-20 text-white  px-4 py-2 rounded text-centre">
     Bersepeda bukanlah sekedar berolahraga <br />
     namun bisa juga untuk mengekspresikan suasana hati kita.<br />
     ~yazaka
   </p>
   </div>
 
-        <div className="bg-[#FFFFFF] w-70 h-20 shadow-lg rounded-2xl mt-10 ml-10">
+        <div className="bg-[#FFFFFF] font-[lexend] w-80 h-20 shadow-lg rounded-2xl mt-10 ml-10">
             <p className="font-semibold text-2xl ml-6 py-5">Lihatlah koleksi kami</p>
             <p className="w-90 ml-6 py-5">Kami menjual berbagai kelengkapan sepeda mulai dari frame, wheel, dll</p>
         </div>
@@ -34,7 +34,7 @@ export default function Home() {
                     />
                 <div className="bg-[#f3c623] w-50 h-10 ml-5 mt-15 shadow-lg rounded-2xl z-10">
                     <Link href="/Frame">
-                      <p className="text-center font-semibold py-2">Lihat Koleksi </p>
+                      <p className="text-center font-[lexend] font-semibold py-2">Lihat Koleksi </p>
                     </Link>                
                 </div>
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
                     />
                 <div className="bg-[#f3c623] w-50 h-10 ml-5 mt-10 shadow-lg rounded-2xl z-10">
                     <Link href="/Wheel">
-                      <p className="text-center font-semibold py-2">Lihat Koleksi</p>
+                      <p className="text-center font-[lexend] font-semibold py-2">Lihat Koleksi</p>
                     </Link>
                 </div>
             </div>
@@ -62,7 +62,7 @@ export default function Home() {
                     />
                 <div className="bg-[#f3c623] w-50 h-10 ml-5 mt-5 shadow-lg rounded-2xl z-10">
                     <Link href="/Component">
-                    <p className="text-center font-semibold py-2">Lihat Koleksi</p>
+                    <p className="text-center font-[lexend] font-semibold py-2">Lihat Koleksi</p>
                     </Link>
                 </div>
             </div>

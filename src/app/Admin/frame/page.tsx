@@ -29,7 +29,7 @@ return ( <div className="min-h-screen bg-white">
         </div>
 
         <div className="flex items-center gap-4 pr-4">
-          <button className="bg-black text-white p-2 rounded-full hover:opacity-70">
+          <button className="bg-green-500 text-white p-2 rounded-full hover:opacity-70">
             ✏️
           </button>
 

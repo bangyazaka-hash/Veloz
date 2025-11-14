@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Frame() {
 
     return (
-        <div>
+        <div className="font-[lexend]">
             <div className="relative w-full h-[250px]">
                 
                 <Image
