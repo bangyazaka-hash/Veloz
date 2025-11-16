@@ -35,7 +35,7 @@ export default function about() {
                 className="absolute inset-y-0 left-29 w-11 mt-95"
 /> 
 
-<h3 className="absolute inset-y-0 left-45 w-11 mt-98">yourveloz@gmail.com</h3>
+<h3 className="absolute inset-y-0 left-45 w-11 mt-98"><Link href="mailto:yourveloz@gmail.com">yourveloz@gmail.com</Link></h3>
 
 </div>
 

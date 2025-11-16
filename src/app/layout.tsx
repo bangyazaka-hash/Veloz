@@ -71,7 +71,7 @@ export default function RootLayout({
           <div className="relative ml-250 mt-[-120]">
           <h1 className="font-bold">Hubungi kami</h1>
           <div className="relative">Jl.Pangauban Kec.Katapang</div>
-          <div className="relative">yourveloz@gmail.com</div>
+          <div className="relative"><Link href="mailto:yourveloz@gmail.com">yourveloz@gmail.com</Link></div>
           <div className="relative"><Link href="https://wa.me/qr/6CAEMBCFK3XVK1">Whatsapp</Link> : 0895411959084</div>
           <div className="flex flex-row gap-5">
           <div className="relative"><Link href="https://www.tiktok.com/@yazaka37?_r=1&_t=ZS-91No59d2nma">Tiktok</Link></div>

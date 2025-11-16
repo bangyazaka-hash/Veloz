@@ -21,7 +21,7 @@ export default function Home() {
 
         <div className="bg-[#FFFFFF] font-[lexend] w-80 h-20 shadow-lg rounded-2xl mt-10 ml-10">
             <p className="font-semibold text-2xl ml-6 py-5">Lihatlah koleksi kami</p>
-            <p className="w-90 ml-6 py-5">Kami menjual berbagai kelengkapan sepeda mulai dari frame, wheel, dll</p>
+            <p className="w-90 ml-6 py-5">Kami menjual berbagai kelengkapan sepeda mulai dari frame, wheel, dan component yang sangat berkualitas.</p>
         </div>
     
            <div className="flex flex-row justify-center flex-wrap mt-35 gap-20">

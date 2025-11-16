@@ -19,3 +19,28 @@ model admin {
   username  String  @unique
   password  String
 }
+
+model Frame {
+  id        Int      @id @default(autoincrement())
+  judul     String
+  harga     Int
+  deskripsi String
+  gambar    String
+}
+
+model Wheel {
+  id        Int      @id @default(autoincrement())
+  judul     String
+  harga     Int
+  deskripsi String
+  gambar    String
+}
+
+model Component {
+  id        Int      @id @default(autoincrement())
+  judul     String
+  harga     Int
+  deskripsi String
+  gambar    String
+}
+
