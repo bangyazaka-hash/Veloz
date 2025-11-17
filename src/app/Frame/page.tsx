@@ -3,13 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Layout from "@/components/Layout";
 
-export default function Frame() {
+function Frame() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     async function load() {
-      const res = await fetch("/api/admin/frame"); 
+      const res = await fetch("/api/admin/frame");
       const json = await res.json();
       setData(json);
     }
@@ -26,7 +27,6 @@ export default function Frame() {
         {data.map((item: any) => (
           <Link key={item.id} href={`/frame/${item.id}`}>
             <div className="bg-white w-60 rounded-2xl shadow-lg p-5">
-
               <div className="relative w-full h-40">
                 <Image
                   src={item.gambar}
@@ -43,8 +43,11 @@ export default function Frame() {
             </div>
           </Link>
         ))}
-
       </div>
     </div>
   );
 }
+
+Frame.getLayout = (page: React.ReactNode) => <Layout>{page}</Layout>;
+
+export default Frame;

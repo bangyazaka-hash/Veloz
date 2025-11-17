@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import navbar from "@/components/Layout";
 
 export default function Home() {
 
     return (
+        <nav>
         <div>
             <div className="relative w-full h-[250px]">
                 
@@ -63,5 +65,6 @@ export default function Home() {
             
         </div>
         </div>
+        </nav>
     );
 };
