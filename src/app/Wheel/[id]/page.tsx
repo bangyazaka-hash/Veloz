@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
 
-export default function DetailFrame({ params }: { params: Promise<{ id: string }> }) {
+export default function DetailWheel({ params }: { params: Promise<{ id: string }> }) {
 
   const { id } = use(params);
 
@@ -11,7 +11,7 @@ export default function DetailFrame({ params }: { params: Promise<{ id: string }
 
   useEffect(() => {
     async function loadData() {
-      const res = await fetch(`/api/admin/frame/${id}`);
+      const res = await fetch(`/api/admin/wheel/${id}`);
       const json = await res.json();
       setData(json);
     }

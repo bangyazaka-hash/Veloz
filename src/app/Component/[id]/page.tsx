@@ -3,15 +3,14 @@
 import Image from "next/image";
 import { use, useEffect, useState } from "react";
 
-export default function DetailFrame({ params }: { params: Promise<{ id: string }> }) {
+export default function DetailComponent({ params }: { params: Promise<{ id: string }> }) {
 
   const { id } = use(params);
-
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     async function loadData() {
-      const res = await fetch(`/api/admin/frame/${id}`);
+      const res = await fetch(`/api/admin/component/${id}`);
       const json = await res.json();
       setData(json);
     }

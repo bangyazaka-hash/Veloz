@@ -3,13 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Layout from "@/components/Layout";
 
-export default function Frame() {
+function Wheel() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     async function load() {
-      const res = await fetch("/api/admin/wheel"); 
+      const res = await fetch("/api/admin/wheel");
       const json = await res.json();
       setData(json);
     }
@@ -24,9 +25,8 @@ export default function Frame() {
 
       <div className="flex flex-row flex-wrap gap-20 p-10">
         {data.map((item: any) => (
-          <Link key={item.id} href={`/wheel/${item.id}`}>
+          <Link key={item.id} href={`/Wheel/${item.id}`}>
             <div className="bg-white w-60 rounded-2xl shadow-lg p-5">
-
               <div className="relative w-full h-40">
                 <Image
                   src={item.gambar}
@@ -43,8 +43,11 @@ export default function Frame() {
             </div>
           </Link>
         ))}
-
       </div>
     </div>
   );
 }
+
+Wheel.getLayout = (page: React.ReactNode) => <Layout>{page}</Layout>;
+
+export default Wheel;
