@@ -39,9 +39,9 @@ export default function RootLayout({
             <Link href="/">Home</Link>
             <div className="relative group"><Link href="/Catalog">Catalog</Link>
               <div className="absolute hidden group-hover:block bg-white z-10">
-                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Frame">Frame</Link></div>
-                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Wheel">Wheel</Link></div>
-                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="Component">Component</Link></div>
+                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="/Frame">Frame</Link></div>
+                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="/Wheel">Wheel</Link></div>
+                <div className="hover:bg-gray-200 text-center px-4 py-2"><Link href="/Component">Component</Link></div>
               </div>
               </div>
             <Link href="/About">About</Link>

@@ -25,7 +25,7 @@ function Frame() {
 
       <div className="flex flex-row flex-wrap gap-20 p-10">
         {data.map((item: any) => (
-          <Link key={item.id} href={`/frame/${item.id}`}>
+          <Link key={item.id} href={`/Frame/${item.id}`}>
             <div className="bg-white w-60 rounded-2xl shadow-lg p-5">
               <div className="relative w-full h-40">
                 <Image
