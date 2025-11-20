@@ -1,96 +1,48 @@
-import { put, del } from "@vercel/blob";
-import prisma from "@/lib/prisma";
-import { NextResponse } from "next/server";
+"use client";
 
-export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
-  try {
-    const data = await prisma.wheel.findUnique({
-      where: { id: Number(params.id) },
-    });
+import Image from "next/image";
+import { use, useEffect, useState } from "react";
 
-    if (!data) {
-      return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
+export default function DetailWheel({ params }: { params: Promise<{ id: string }> }) {
+
+  const { id } = use(params);
+
+  const [data, setData] = useState<any>(null);
+
+  useEffect(() => {
+    async function loadData() {
+      const res = await fetch(`/api/admin/wheel/${id}`);
+      const json = await res.json();
+      setData(json);
     }
+    loadData();
+  }, [id]);
 
-    return NextResponse.json(data);
-  } catch (e) {
-    return NextResponse.json({ message: "Error mengambil data", e }, { status: 500 });
-  }
-}
+  if (!data) return <div className="p-10 font-[lexend]">Loading...</div>;
 
-export async function PUT(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
-  try {
-    const oldData = await prisma.wheel.findUnique({
-      where: { id: Number(params.id) },
-    });
+  return (
+    <div className="p-10 font-[lexend] flex gap-10">
+      <div className="w-[350px] bg-white shadow-lg rounded-2xl p-5">
+        <div className="relative w-full h-60">
+          <Image
+            src={data?.gambar ?? "/no-image.png"}
+            alt={data?.judul ?? "Product Image"}
+            fill
+            className="object-contain"
+          />
+        </div>
 
-    if (!oldData) {
-      return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
-    }
+        <h2 className="mt-3 font-semibold text-xl">{data?.judul}</h2>
 
-    const formData = await req.formData();
-    const judul = formData.get("judul") as string;
-    const harga = Number(formData.get("harga"));
-    const deskripsi = formData.get("deskripsi") as string;
-    const file = formData.get("gambar") as File | null;
+        <p className="text-red-600 font-bold text-lg">
+          Rp {data?.harga ? Number(data.harga).toLocaleString("id-ID") : "-"}
+        </p>
+      </div>
 
-    let imageUrl: string | undefined = undefined;
-
-    if (file && file.size > 0) {
-      const filename = Date.now() + "-" + file.name.replace(/\s+/g, "_");
-      const upload = await put(filename, file, { access: "public" });
-      imageUrl = upload.url;
-      
-      if (oldData.gambar && oldData.gambar.startsWith("https://blob")) {
-        await del(oldData.gambar);
-      }
-    }
-
-    const updated = await prisma.wheel.update({
-      where: { id: Number(params.id) },
-      data: {
-        judul,
-        harga,
-        deskripsi,
-        ...(imageUrl && { gambar: imageUrl }),
-      },
-    });
-
-    return NextResponse.json(updated);
-  } catch (e) {
-    return NextResponse.json({ message: "Gagal update data", e }, { status: 500 });
-  }
-}
-
-export async function DELETE(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
-  try {
-    const data = await prisma.wheel.findUnique({
-      where: { id: Number(params.id) },
-    });
-
-    if (!data) {
-      return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
-    }
-
-    if (data.gambar && data.gambar.startsWith("https://blob")) {
-      await del(data.gambar);
-    }
-
-    await prisma.wheel.delete({
-      where: { id: Number(params.id) },
-    });
-
-    return NextResponse.json({ message: "Berhasil menghapus wheel" });
-  } catch (e) {
-    return NextResponse.json({ message: "Gagal menghapus wheel", e }, { status: 500 });
-  }
+      <div className="flex-1 bg-white shadow-lg rounded-2xl p-6 leading-relaxed">
+        <h3 className="text-xl font-semibold mb-3">Detail Product</h3>
+        <p className="text-gray-700 whitespace-pre-line">{data?.deskripsi}</p>
+      </div>
+    </div>
+  );
 }

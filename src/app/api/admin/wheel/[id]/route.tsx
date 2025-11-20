@@ -1,17 +1,14 @@
+import { put, del } from "@vercel/blob";
 import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
 
 export async function GET(
   req: Request,
-  context: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await context.params;
-
     const data = await prisma.wheel.findUnique({
-      where: { id: Number(id) },
+      where: { id: Number(params.id) },
     });
 
     if (!data) {
@@ -19,73 +16,81 @@ export async function GET(
     }
 
     return NextResponse.json(data);
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: "Error mengambil wheel", error }, { status: 500 });
+  } catch (e) {
+    return NextResponse.json({ message: "Error mengambil data", e }, { status: 500 });
   }
 }
 
 export async function PUT(
   req: Request,
-  context: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await context.params;
-    const formData = await req.formData();
+    const oldData = await prisma.wheel.findUnique({
+      where: { id: Number(params.id) },
+    });
 
+    if (!oldData) {
+      return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
+    }
+
+    const formData = await req.formData();
     const judul = formData.get("judul") as string;
     const harga = Number(formData.get("harga"));
     const deskripsi = formData.get("deskripsi") as string;
     const file = formData.get("gambar") as File | null;
 
-    let gambarPath: string | undefined = undefined;
+    let imageUrl: string | undefined = undefined;
 
     if (file && file.size > 0) {
-      const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-
-      const uploadDir = path.join(process.cwd(), "public/uploads");
-      if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir, { recursive: true });
-
       const filename = Date.now() + "-" + file.name.replace(/\s+/g, "_");
-      const filepath = path.join(uploadDir, filename);
-
-      fs.writeFileSync(filepath, buffer);
-
-      gambarPath = "/uploads/" + filename;
+      const upload = await put(filename, file, { access: "public" });
+      imageUrl = upload.url;
+      
+      if (oldData.gambar && oldData.gambar.startsWith("https://blob")) {
+        await del(oldData.gambar);
+      }
     }
 
     const updated = await prisma.wheel.update({
-      where: { id: Number(id) },
+      where: { id: Number(params.id) },
       data: {
         judul,
         harga,
         deskripsi,
-        ...(gambarPath && { gambar: gambarPath }),
+        ...(imageUrl && { gambar: imageUrl }),
       },
     });
 
     return NextResponse.json(updated);
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: "Gagal mengupdate wheel", error }, { status: 500 });
+  } catch (e) {
+    return NextResponse.json({ message: "Gagal update data", e }, { status: 500 });
   }
 }
 
 export async function DELETE(
   req: Request,
-  context: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await context.params;
-
-    await prisma.wheel.delete({
-      where: { id: Number(id) },
+    const data = await prisma.wheel.findUnique({
+      where: { id: Number(params.id) },
     });
 
-    return NextResponse.json({ message: "Wheel berhasil dihapus" }, { status: 200 });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ message: "Gagal menghapus wheel", error }, { status: 500 });
+    if (!data) {
+      return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
+    }
+
+    if (data.gambar && data.gambar.startsWith("https://blob")) {
+      await del(data.gambar);
+    }
+
+    await prisma.wheel.delete({
+      where: { id: Number(params.id) },
+    });
+
+    return NextResponse.json({ message: "Berhasil menghapus wheel" });
+  } catch (e) {
+    return NextResponse.json({ message: "Gagal menghapus wheel", e }, { status: 500 });
   }
 }
