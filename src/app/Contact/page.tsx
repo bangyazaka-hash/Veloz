@@ -28,7 +28,7 @@ export default function about() {
 
         <div className="w-240">
   <Image 
-                src="/gmail.png"
+                src="/email.png"
                 alt="Contact"
                 width={40}
                 height={40}

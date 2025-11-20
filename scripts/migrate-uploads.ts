@@ -16,11 +16,14 @@ import path from "path";
 
     const blob = await put(file, fs.readFileSync(filePath), {
       access: "public",
+      allowOverwrite: true,
     });
 
-    await prisma.component.updateMany({ where: { gambar: { contains: file.replace(/\s+/g, "_") } }, data: { gambar: blob.url } });
-    await prisma.frame.updateMany({ where: { gambar: { contains: file.replace(/\s+/g, "_") } }, data: { gambar: blob.url } });
-    await prisma.wheel.updateMany({ where: { gambar: { contains: file.replace(/\s+/g, "_") } }, data: { gambar: blob.url } });
+    const normalizedFile = file.replace(/\s+/g, "_");
+
+    await prisma.component.updateMany({ where: { gambar: { contains: normalizedFile } }, data: { gambar: blob.url } });
+    await prisma.frame.updateMany({ where: { gambar: { contains: normalizedFile } }, data: { gambar: blob.url } });
+    await prisma.wheel.updateMany({ where: { gambar: { contains: normalizedFile } }, data: { gambar: blob.url } });
 
     console.log(`Uploaded & Updated DB => ${blob.url}`);
   }
