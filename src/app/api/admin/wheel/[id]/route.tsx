@@ -1,15 +1,15 @@
 import { put, del } from "@vercel/blob";
 import prisma from "@/lib/prisma";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
+  req: NextRequest,
+  context: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await context.params;
+
   try {
-    const data = await prisma.wheel.findUnique({
-      where: { id: Number(params.id) },
-    });
+    const data = await prisma.wheel.findUnique({ where: { id: Number(id) } });
 
     if (!data) {
       return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
@@ -22,16 +22,16 @@ export async function GET(
 }
 
 export async function PUT(
-  req: Request,
-  { params }: { params: { id: string } }
+  req: NextRequest,
+  context: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await context.params;
+
   try {
-    const oldData = await prisma.wheel.findUnique({
-      where: { id: Number(params.id) },
-    });
+    const oldData = await prisma.wheel.findUnique({ where: { id: Number(id) } });
 
     if (!oldData) {
-      return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
+      return NextResponse.json({ message: "wheel tidak ditemukan" }, { status: 404 });
     }
 
     const formData = await req.formData();
@@ -46,14 +46,14 @@ export async function PUT(
       const filename = Date.now() + "-" + file.name.replace(/\s+/g, "_");
       const upload = await put(filename, file, { access: "public" });
       imageUrl = upload.url;
-      
+
       if (oldData.gambar && oldData.gambar.startsWith("https://blob")) {
         await del(oldData.gambar);
       }
     }
 
     const updated = await prisma.wheel.update({
-      where: { id: Number(params.id) },
+      where: { id: Number(id) },
       data: {
         judul,
         harga,
@@ -69,13 +69,13 @@ export async function PUT(
 }
 
 export async function DELETE(
-  req: Request,
-  { params }: { params: { id: string } }
+  req: NextRequest,
+  context: { params: Promise<{ id: string }> }
 ) {
+  const { id } = await context.params;
+
   try {
-    const data = await prisma.wheel.findUnique({
-      where: { id: Number(params.id) },
-    });
+    const data = await prisma.wheel.findUnique({ where: { id: Number(id) } });
 
     if (!data) {
       return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
@@ -85,9 +85,7 @@ export async function DELETE(
       await del(data.gambar);
     }
 
-    await prisma.wheel.delete({
-      where: { id: Number(params.id) },
-    });
+    await prisma.wheel.delete({ where: { id: Number(id) } });
 
     return NextResponse.json({ message: "Berhasil menghapus wheel" });
   } catch (e) {
