@@ -31,7 +31,7 @@ export default function LoginPage() {
     <div className="flex font-[lexend] min-h-screen">
       <div className="w-1/2 bg-[#f3c623] flex flex-col items-center justify-center text-black">
         <Image 
-        src="/veloz.png" 
+        src="/Veloz.png" 
         alt="Login" 
         width={150} 
         height={150} 
