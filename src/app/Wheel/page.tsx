@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
 
 function Wheel() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
     async function load() {
