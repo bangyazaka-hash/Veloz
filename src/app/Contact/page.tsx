@@ -28,7 +28,7 @@ export default function about() {
 
         <div className="w-240">
   <Image 
-                src="/email.png"
+                src="/uploads/email.png"
                 alt="Contact"
                 width={40}
                 height={40}
@@ -41,7 +41,7 @@ export default function about() {
 
  <div className="w-240 ">
   <Image 
-                src="/ig.png"
+                src="/uploads/ig.png"
                 alt="Contact"
                 width={40}
                 height={40}
@@ -54,7 +54,7 @@ export default function about() {
 
     <div className="w-240 ">
   <Image 
-                src="/tiktok.png"
+                src="/uploads/tiktok.png"
                 alt="Contact"
                 width={40}
                 height={40}

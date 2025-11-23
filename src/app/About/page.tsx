@@ -25,7 +25,7 @@ export default function about() {
               <div className="relative justify-center w-90 h-90">
                        <div className="bg-[#f3c623] w-70 h-90 shadow-lg ml-[-120] mt-25 p-5">
                         <Image
-                                src="/contact.png"
+                                src="/uploads/contact.png"
                                 alt="Detail"
                                 fill
                                 className="object-contain mt-20 ml-[-120]"
