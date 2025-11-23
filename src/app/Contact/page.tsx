@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Layout from "@/components/Layout"
 
 export default function About() {
   return (
+    <Layout>
     <div className="flex items-start justify-between p-5">
       <div className="m-10">
         <h1 className="absolute font-[lexend] font-semibold m-15 mt-20 text-2xl">
@@ -68,5 +70,6 @@ export default function About() {
         </h3>
       </div>
     </div>
+    </Layout>
   );
 }

@@ -1,5 +1,8 @@
+import Layout from "@/components/Layout"
+
 export default function About() {
   return (
+    <Layout>
     <div className="flex items-start justify-between p-5 font-[lexend]">
       <div className="w-1/2 p-10">
         <h1 className="font-semibold text-2xl mb-5">Tentang Kita</h1>
@@ -34,5 +37,6 @@ export default function About() {
           />
         </div>
     </div>
+    </Layout>
   );
 }

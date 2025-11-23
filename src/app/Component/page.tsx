@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Layout from "@/components/Layout";
+import Layout from "@/components/Layout"
 
-function ComponentPage() {
+export default function ComponentPage() {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -17,12 +17,14 @@ function ComponentPage() {
   }, []);
 
   return (
+    <Layout>
     <div className="font-[lexend]">
       <div className="relative w-full h-[250px]">
         <img 
-        src="/uploads/rb.jpg" 
-        alt="Component" 
-        className="object-cover w-full h-full" />
+          src="/uploads/rb.jpg" 
+          alt="Component" 
+          className="object-cover w-full h-full"
+        />
       </div>
 
       <div className="flex flex-row flex-wrap gap-20 p-10">
@@ -46,8 +48,6 @@ function ComponentPage() {
         ))}
       </div>
     </div>
+    </Layout>
   );
 }
-
-ComponentPage.getLayout = (page: React.ReactNode) => <Layout>{page}</Layout>;
-export default ComponentPage;

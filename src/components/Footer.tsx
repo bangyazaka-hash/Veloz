@@ -2,28 +2,29 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 mt-10 font-[lexend] p-10 relative">
+    <footer className="mt-10 font-[lexend] p-10 relative">
       <hr className="mb-6" />
 
       <div className="flex flex-col md:flex-row justify-between gap-10">
-        {/* Brand */}
         <div className="md:w-1/3">
-          <div className="bg-[#f3c623] w-32 h-12 rounded-full flex items-center justify-center mb-2">
+          <div className="bg-[#f3c623] w-25 h-10 rounded-full flex items-center justify-center mb-2">
             <h1 className="font-bold text-lg text-center">Véloz</h1>
           </div>
-          <h2 className="font-bold mb-2">Reach Your Max Speed</h2>
-          <p className="text-justify">
+          <div> 
+            <h2 className="font-bold mb-2 ml-30 mt-[-35]">Reach Your Max Speed</h2>
+          </div>
+          <p className="text-justify mb-5">
             Veloz adalah sebuah web yang menyediakan catalog sepeda di toko. Web ini hanya menampilkan sepeda yang tersedia di toko owner.
           </p>
         </div>
 
-        <div className="md:w-1/3">
+        <div className="md:w-1/3 ml-30">
           <h2 className="font-bold mb-2">Navigation</h2>
           <ul className="space-y-1">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/frame">Frame</Link></li>
-            <li><Link href="/wheel">Wheel</Link></li>
-            <li><Link href="/component">Component</Link></li>
+            <li><Link href="/Frame">Frame</Link></li>
+            <li><Link href="/Wheel">Wheel</Link></li>
+            <li><Link href="/Component">Component</Link></li>
           </ul>
         </div>
 

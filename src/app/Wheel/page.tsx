@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Layout from "@/components/Layout";
+import Layout from "@/components/Layout"
 
-function WheelPage() {
+export default function WheelPage() {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -17,12 +17,14 @@ function WheelPage() {
   }, []);
 
   return (
+    <Layout>
     <div className="font-[lexend]">
       <div className="relative w-full h-[250px]">
         <img 
-        src="/uploads/rb.jpg" 
-        alt="Wheel" 
-        className="object-cover w-full h-full" />
+          src="/uploads/rb.jpg" 
+          alt="Wheel" 
+          className="object-cover w-full h-full"
+        />
       </div>
 
       <div className="flex flex-row flex-wrap gap-20 p-10">
@@ -46,8 +48,6 @@ function WheelPage() {
         ))}
       </div>
     </div>
+    </Layout>
   );
 }
-
-WheelPage.getLayout = (page: React.ReactNode) => <Layout>{page}</Layout>;
-export default WheelPage;

@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Layout from "@/components/Layout";
+import Layout from "@/components/Layout"
 
-function Frame() {
+export default function Frame() {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -17,10 +17,11 @@ function Frame() {
   }, []);
 
   return (
+    <Layout>
     <div className="font-[lexend]">
       <div className="relative w-full h-[250px]">
         <img
-          src="uploads/rb.jpg"
+          src="/uploads/rb.jpg"
           alt="Frame"
           className="object-cover w-full h-full"
         />
@@ -47,9 +48,6 @@ function Frame() {
         ))}
       </div>
     </div>
+    </Layout>
   );
 }
-
-Frame.getLayout = (page: React.ReactNode) => <Layout>{page}</Layout>;
-
-export default Frame;

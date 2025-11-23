@@ -1,6 +1,7 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
+import Layout from "@/components/Layout"
 
 export default function DetailComponent({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -19,6 +20,7 @@ export default function DetailComponent({ params }: { params: Promise<{ id: stri
   if (!data) return <div className="p-10 font-[lexend]">Loading...</div>;
 
   return (
+    <Layout>
     <div className="p-10 font-[lexend] flex gap-10">
       <div className="w-[350px] bg-white shadow-lg rounded-2xl p-5">
         <div className="w-full h-60">
@@ -40,5 +42,6 @@ export default function DetailComponent({ params }: { params: Promise<{ id: stri
         <p className="text-gray-700 whitespace-pre-line">{data?.deskripsi}</p>
       </div>
     </div>
+    </Layout>
   );
 }

@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Layout from "@/components/Layout"
 
 export default function Home() {
   return (
+    <Layout>
     <div>
       <div className="relative w-full h-[250px]">
         <img
@@ -72,5 +74,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </Layout>
   );
 }
