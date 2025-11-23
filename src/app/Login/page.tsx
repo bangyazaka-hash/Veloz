@@ -1,7 +1,6 @@
 ﻿"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
@@ -30,11 +29,11 @@ export default function LoginPage() {
   return (
     <div className="flex font-[lexend] min-h-screen">
       <div className="w-1/2 bg-[#f3c623] flex flex-col items-center justify-center text-black">
-        <Image 
-        src="/Veloz.png" 
-        alt="Login" 
-        width={150} 
-        height={150} 
+        
+        <img 
+          src="/uploads/Veloz.png"
+          alt="Login"
+          className="w-[200px] h-[150px]"
         />
 
         <h1 className="text-2xl font-bold mt-4">Reach Your Max Speed</h1>

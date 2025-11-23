@@ -7,7 +7,7 @@ export default function EditFramePage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = use(params); // FIX: params Next.js 15
+  const { id } = use(params);
 
   const [judul, setJudul] = useState("");
   const [harga, setHarga] = useState("");
@@ -15,7 +15,6 @@ export default function EditFramePage({
   const [gambar, setGambar] = useState<File | null>(null);
   const [preview, setPreview] = useState("");
 
-  // Ambil data lama
   useEffect(() => {
     async function loadData() {
       const res = await fetch(`/api/admin/frame/${id}`);
