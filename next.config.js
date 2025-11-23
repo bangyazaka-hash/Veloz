@@ -4,12 +4,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '9oXSsOrptfrw8nCj.public.blob.vercel-storage.com',
+        hostname: '9oxssorptfrw8ncj.public.blob.vercel-storage.com',
+        pathname: '/**',
       },
     ],
   },
   eslint: {
-    ignoreDuringBuilds: true, 
+    ignoreDuringBuilds: true,
   },
 };
 
