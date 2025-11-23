@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
 
-function Component() {
+function ComponentPage() {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -20,7 +19,10 @@ function Component() {
   return (
     <div className="font-[lexend]">
       <div className="relative w-full h-[250px]">
-        <Image src="/rb.jpg" alt="Component" fill className="object-cover" />
+        <img 
+        src="/uploads/rb.jpg" 
+        alt="Component" 
+        className="object-cover w-full h-full" />
       </div>
 
       <div className="flex flex-row flex-wrap gap-20 p-10">
@@ -28,11 +30,10 @@ function Component() {
           <Link key={item.id} href={`/Component/${item.id}`}>
             <div className="bg-white w-60 rounded-2xl shadow-lg p-5">
               <div className="relative w-full h-40">
-                <Image
+                <img
                   src={item.gambar}
                   alt={item.judul}
-                  fill
-                  className="object-contain"
+                  className="object-contain w-full h-full"
                 />
               </div>
 
@@ -48,6 +49,5 @@ function Component() {
   );
 }
 
-Component.getLayout = (page: React.ReactNode) => <Layout>{page}</Layout>;
-
-export default Component;
+ComponentPage.getLayout = (page: React.ReactNode) => <Layout>{page}</Layout>;
+export default ComponentPage;

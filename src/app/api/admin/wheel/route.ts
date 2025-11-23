@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
+import { NextResponse } from "next/server";
 import { put } from "@vercel/blob";
 
 export async function GET() {
@@ -21,14 +21,10 @@ export async function POST(req: Request) {
   const bytes = await file.arrayBuffer();
   const buffer = Buffer.from(bytes);
 
-  const blob = await put(
-    Date.now() + "-" + file.name.replace(/\s+/g, "_"),
-    buffer,
-    {
-      access: "public",
-      addRandomSuffix: true,
-    }
-  );
+  const blob = await put(Date.now() + "-" + file.name.replace(/\s+/g, "_"), buffer, {
+    access: "public",
+    addRandomSuffix: true,
+  });
 
   const newData = await prisma.wheel.create({
     data: {

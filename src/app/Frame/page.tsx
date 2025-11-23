@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
@@ -20,7 +19,11 @@ function Frame() {
   return (
     <div className="font-[lexend]">
       <div className="relative w-full h-[250px]">
-        <Image src="/rb.jpg" alt="Frame" fill className="object-cover" />
+        <img
+          src="uploads/rb.jpg"
+          alt="Frame"
+          className="object-cover w-full h-full"
+        />
       </div>
 
       <div className="flex flex-row flex-wrap gap-20 p-10">
@@ -28,11 +31,10 @@ function Frame() {
           <Link key={item.id} href={`/Frame/${item.id}`}>
             <div className="bg-white w-60 rounded-2xl shadow-lg p-5">
               <div className="relative w-full h-40">
-                <Image
+                <img
                   src={item.gambar}
                   alt={item.judul}
-                  fill
-                  className="object-contain"
+                  className="object-contain w-full h-full"
                 />
               </div>
 

@@ -1,6 +1,11 @@
-import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
+import { NextResponse } from "next/server";
 import { put } from "@vercel/blob";
+
+export async function GET() {
+  const data = await prisma.frame.findMany();
+  return NextResponse.json(data);
+}
 
 export async function POST(req: Request) {
   const formData = await req.formData();

@@ -6,7 +6,6 @@ import Link from "next/link";
 export default function DaftarComponentPage() {
   const [data, setData] = useState([]);
 
-  // Fungsi untuk load data frame
   async function loadData() {
     const res = await fetch("/api/admin/frame");
     const json = await res.json();

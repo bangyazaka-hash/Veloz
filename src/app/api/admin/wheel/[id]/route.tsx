@@ -31,7 +31,7 @@ export async function PUT(
     const oldData = await prisma.wheel.findUnique({ where: { id: Number(id) } });
 
     if (!oldData) {
-      return NextResponse.json({ message: "wheel tidak ditemukan" }, { status: 404 });
+      return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
     }
 
     const formData = await req.formData();
@@ -40,14 +40,21 @@ export async function PUT(
     const deskripsi = formData.get("deskripsi") as string;
     const file = formData.get("gambar") as File | null;
 
-    let imageUrl: string | undefined = undefined;
+    let imageUrl = oldData.gambar;
 
     if (file && file.size > 0) {
+      const bytes = await file.arrayBuffer();
+      const buffer = Buffer.from(bytes);
       const filename = Date.now() + "-" + file.name.replace(/\s+/g, "_");
-      const upload = await put(filename, file, { access: "public" });
-      imageUrl = upload.url;
 
-      if (oldData.gambar && oldData.gambar.startsWith("https://blob")) {
+      const blob = await put(filename, buffer, {
+        access: "public",
+        addRandomSuffix: true,
+      });
+
+      imageUrl = blob.url;
+
+      if (oldData.gambar.includes(".blob.vercel-storage.com")) {
         await del(oldData.gambar);
       }
     }
@@ -58,7 +65,7 @@ export async function PUT(
         judul,
         harga,
         deskripsi,
-        ...(imageUrl && { gambar: imageUrl }),
+        gambar: imageUrl,
       },
     });
 
@@ -81,7 +88,7 @@ export async function DELETE(
       return NextResponse.json({ message: "Wheel tidak ditemukan" }, { status: 404 });
     }
 
-    if (data.gambar && data.gambar.startsWith("https://blob")) {
+    if (data.gambar.includes(".blob.vercel-storage.com")) {
       await del(data.gambar);
     }
 
