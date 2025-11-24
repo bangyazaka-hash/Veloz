@@ -18,11 +18,20 @@ export default function About() {
 
         <div className="bg-white shadow-lg w-[400px] p-5 rounded-xl mt-5">
           <div className="bg-[#f3c623] shadow-lg rounded-full w-20 py-2 mb-2 text-center">
+            <p className="font-semibold">2024</p>
+          </div>
+
+          <p className="leading-relaxed text-justify">
+            Berawal dari membaca manhwa bercita-cita membeli sepeda.
+          </p>
+        </div>
+          <div className="bg-white shadow-lg w-[400px] p-5 rounded-xl mt-5">
+          <div className="bg-[#f3c623] shadow-lg rounded-full w-20 py-2 mb-2 text-center">
             <p className="font-semibold">2025</p>
           </div>
 
           <p className="leading-relaxed text-justify">
-            Berawal dari membaca manhwa kini menjadi toko sepeda.
+            Mempunyai sepeda fixie dan membuat website tentang catalog sepeda balap.
           </p>
         </div>
       </div>

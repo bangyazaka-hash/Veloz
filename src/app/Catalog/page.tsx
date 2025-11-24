@@ -4,7 +4,7 @@ import Layout from "@/components/Layout"
 export default function Home() {
   return (
     <Layout>
-    <div>
+    <div className="font-[lexend]" >
       <div className="relative w-full h-[250px]">
         <img
           src="/uploads/gng.png"

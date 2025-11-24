@@ -2,10 +2,12 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
+    <div className="font-[lexend]">
     <header className="bg-[#f3c623] shadow-lg h-12 flex items-center justify-between px-4">
       <div className="flex font-[lexend] font-semibold items-center space-x-4">
         <h1 className="font-bold text-2xl">Véloz</h1>
-        <nav className="flex space-x-4 font-[lexend]">
+        </div>
+        <nav className="flex space-x-4 font-[lexend] font-semibold right-0 ">
           <Link href="/">Home</Link>
           <div className="relative group">
             <Link href="/Catalog">Catalog</Link>
@@ -24,7 +26,8 @@ export default function Navbar() {
           <Link href="/About">About</Link>
           <Link href="/Contact">Contact Us</Link>
         </nav>
-      </div>
     </header>
+    </div>
+
   );
 }
