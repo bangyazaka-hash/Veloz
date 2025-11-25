@@ -27,38 +27,20 @@ export default function Home() {
       </div>
 
       <div className="p-10">
-        <div className="flex items-start justify-between gap-10">
-          <p className="text-6xl font-semibold font-[lexend] mt-10 min-w-[200px]">
-            HOT <br />
-            SALE!
+        <div className="flex flex-col items-start">
+          <p className="text-4xl font-semibold font-[lexend] mt-10 min-w-[200px]">
+            Selamat Datang Di Veloz
+          </p>
+           <p className="text-xl font-[lexend] mt-10 min-w-[200px]">
+            Veloz akan membantu anda untuk memilih perlengkapan sepeda balap anda sebelum anda membeli ketoko kami.
+            kami menyediakan perlengkapan sepeda yang berkualitas dan tentunya original. jika anda ingin membeli atau
+            bertanya seputar sepeda balap yang tersedia di toko kalian dapat membuka halaman Contact us.
+          </p>
+          <p className="text-xl font-[lexend] mt-10 min-w-[200px]">
+           Terima Kasih.
           </p>
 
-          <div className="flex gap-12">
-
-            <div className="relative w-72 h-60 bg-white shadow-xl rounded-2xl">
-              <img
-                src="/uploads/first.png"
-                alt="Frame 1"
-                className="object-contain w-full h-full p-3"
-              />
-            </div>
-
-            <div className="relative w-72 h-60 bg-white shadow-xl rounded-2xl">
-              <img
-                src="/uploads/sworks.png"
-                alt="Frame 2"
-                className="object-contain w-full h-full p-3"
-              />
-            </div>
-
-            <div className="relative w-72 h-60 bg-white shadow-xl rounded-2xl">
-              <img
-                src="/uploads/giant.png"
-                alt="Frame 3"
-                className="object-contain w-full h-full p-3"
-              />
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
