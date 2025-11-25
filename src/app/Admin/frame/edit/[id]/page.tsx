@@ -62,7 +62,7 @@ export default function EditFramePage({
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <input
             type="text"
-            placeholder="Judul Frame"
+            placeholder="Merk Frame"
             value={judul}
             onChange={(e) => setJudul(e.target.value)}
             className="rounded-full p-3 bg-gray-100 outline-none shadow-sm"

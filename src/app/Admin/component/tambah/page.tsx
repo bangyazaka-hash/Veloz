@@ -40,7 +40,7 @@ export default function TambahComponentPage() {
 
           <input
             type="text"
-            placeholder="Judul Component"
+            placeholder="Merk Component"
             value={judul}
             onChange={(e) => setJudul(e.target.value)}
             className="rounded-full p-3 bg-gray-100 outline-none shadow-sm"
