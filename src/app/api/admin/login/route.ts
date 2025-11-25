@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
-
-const prisma = new PrismaClient();
 
 export async function POST(req: Request) {
   try {
@@ -21,9 +19,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Password salah" }, { status: 401 });
     }
 
-    return NextResponse.json({ success: true, message: "Login berhasil" });
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ error: "Terjadi kesalahan" }, { status: 500 });
+    console.error("LOGIN ERROR:", error);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
