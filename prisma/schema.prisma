@@ -1,12 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
-
 }
 
 datasource db {
@@ -15,13 +8,13 @@ datasource db {
 }
 
 model admin {
-  id        Int     @id @default(autoincrement())
-  username  String  @unique
-  password  String
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
 }
 
 model Frame {
-  id        Int      @id @default(autoincrement())
+  id        Int    @id @default(autoincrement())
   judul     String
   harga     Int
   deskripsi String
@@ -29,7 +22,7 @@ model Frame {
 }
 
 model Wheel {
-  id        Int      @id @default(autoincrement())
+  id        Int    @id @default(autoincrement())
   judul     String
   harga     Int
   deskripsi String
@@ -37,10 +30,33 @@ model Wheel {
 }
 
 model Component {
-  id        Int      @id @default(autoincrement())
+  id        Int    @id @default(autoincrement())
   judul     String
   harga     Int
   deskripsi String
   gambar    String
 }
 
+model component {
+  id        Int    @id @default(autoincrement())
+  judul     String
+  harga     Int
+  deskripsi String
+  gambar    String
+}
+
+model frame {
+  id        Int    @id @default(autoincrement())
+  judul     String
+  harga     Int
+  deskripsi String
+  gambar    String
+}
+
+model wheel {
+  id        Int    @id @default(autoincrement())
+  judul     String
+  harga     Int
+  deskripsi String
+  gambar    String
+}

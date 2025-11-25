@@ -13,7 +13,7 @@ CREATE TABLE `Frame` (
     `gambar` VARCHAR(191) NOT NULL,
 
     PRIMARY KEY (`id`)
-) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+);
 
 -- CreateTable
 CREATE TABLE `Wheel` (
@@ -24,7 +24,7 @@ CREATE TABLE `Wheel` (
     `gambar` VARCHAR(191) NOT NULL,
 
     PRIMARY KEY (`id`)
-) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+);
 
 -- CreateTable
 CREATE TABLE `Component` (
@@ -35,7 +35,4 @@ CREATE TABLE `Component` (
     `gambar` VARCHAR(191) NOT NULL,
 
     PRIMARY KEY (`id`)
-) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
--- CreateIndex
-CREATE UNIQUE INDEX `admin_username_key` ON `admin`(`username`);
+);
