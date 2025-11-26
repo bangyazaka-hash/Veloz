@@ -32,7 +32,7 @@ export default function Footer() {
           <h2 className="font-bold mb-2">Hubungi kami</h2>
           <p>Jl. Pangauban Kec. Katapang</p>
           <p><Link href="mailto:yourveloz@gmail.com">yourveloz@gmail.com</Link></p>
-          <p>Whatsapp: <Link href="https://wa.me/qr/6CAEMBCFK3XVK1">0895411959084</Link></p>
+          <p>Whatsapp: <Link href="https://wa.me/6289630165130">+62-896-3016-5130</Link></p>
           <div className="flex gap-4 mt-2">
             <Link href="https://www.tiktok.com/@yazaka37?_r=1&_t=ZS-91No59d2nma">Tiktok</Link>
             <Link href="https://www.instagram.com/yzakaa_?igsh=bW15YXVvdGJwY21o">Instagram</Link>
