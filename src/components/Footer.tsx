@@ -11,7 +11,7 @@ export default function Footer() {
             <h1 className="font-bold text-lg text-center">Véloz</h1>
           </div>
           <div> 
-            <h2 className="font-bold mb-2 ml-30 mt-[-35]">Reach Your Max Speed</h2>
+            <h2 className="font-bold mb-2 ml-30 mt-[-35] w-200">Reach Your Max Speed</h2>
           </div>
           <p className="text-justify mb-5">
             Veloz adalah sebuah web yang menyediakan catalog sepeda di toko. Web ini hanya menampilkan sepeda yang tersedia di toko owner.
