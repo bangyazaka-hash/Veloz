@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-10 font-[lexend] p-10 relative">
+    <footer className="font-[lexend] p-10 relative">
       <hr className="mb-6" />
 
       <div className="flex flex-col md:flex-row justify-between gap-10">
@@ -18,8 +18,8 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="md:w-1/3 ">
-          <h2 className="font-bold mb-2">Navigation</h2>
+        <div className="md:w-1/3 ml-30">
+          <h2 className="font-bold">Navigation</h2>
           <ul className="space-y-1">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/Frame">Frame</Link></li>
@@ -36,6 +36,9 @@ export default function Footer() {
           <div className="flex gap-4 mt-2">
             <Link href="https://www.tiktok.com/@yazaka37?_r=1&_t=ZS-91No59d2nma">Tiktok</Link>
             <Link href="https://www.instagram.com/yzakaa_?igsh=bW15YXVvdGJwY21o">Instagram</Link>
+          </div>
+          <div className="text-gray-200">
+            <Link href="/Login">Login</Link>
           </div>
         </div>
       </div>
