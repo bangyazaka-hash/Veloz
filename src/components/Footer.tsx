@@ -37,7 +37,7 @@ export default function Footer() {
             <Link href="https://www.tiktok.com/@yazaka37?_r=1&_t=ZS-91No59d2nma">Tiktok</Link>
             <Link href="https://www.instagram.com/yzakaa_?igsh=bW15YXVvdGJwY21o">Instagram</Link>
           </div>
-          <div className="text-gray-200">
+          <div className="text-gray-100">
             <Link href="/Login">Login</Link>
           </div>
         </div>
