@@ -18,7 +18,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="md:w-1/3 ml-30">
+        <div className="md:w-1/3 ">
           <h2 className="font-bold mb-2">Navigation</h2>
           <ul className="space-y-1">
             <li><Link href="/">Home</Link></li>

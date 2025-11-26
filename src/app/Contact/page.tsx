@@ -10,7 +10,7 @@ export default function About() {
 
         <p className="text-gray-700 leading-relaxed max-w-2xl text-justify">
           Pelayanan dari Veloz dimulai dari pukul 10.00-17.00. 
-          Scan barcode yang ada di sisi kanan untuk ke WhatsApp kami,
+          Scan barcode yang tersedia di halaman ini untuk ke WhatsApp kami,
           atau bisa menghubungi lewat media sosial kami di bawah ini.
           Terima kasih.
         </p>
