@@ -11,17 +11,37 @@ export async function POST(req: Request) {
     });
 
     if (!admin) {
-      return NextResponse.json({ error: "Username tidak ditemukan" }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: "Username tidak ditemukan" },
+        { status: 401 }
+      );
     }
 
     const passwordMatch = bcrypt.compareSync(password, admin.password);
     if (!passwordMatch) {
-      return NextResponse.json({ error: "Password salah" }, { status: 401 });
+      return NextResponse.json(
+        { success: false, error: "Password salah" },
+        { status: 401 }
+      );
     }
 
-    return NextResponse.json({ success: true });
+    // ✅ Login sukses + set cookie untuk middleware
+    const res = NextResponse.json({ success: true });
+
+    res.cookies.set("admin_session", String(admin.id), {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production",
+      path: "/",
+      maxAge: 60 * 60 * 24, // 1 hari
+    });
+
+    return res;
   } catch (error) {
     console.error("LOGIN ERROR:", error);
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: "Server error" },
+      { status: 500 }
+    );
   }
 }
