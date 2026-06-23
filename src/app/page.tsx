@@ -29,10 +29,10 @@ export default function Home() {
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link
-                    href="/Catalog"
+                    href="/About"
                     className="bg-white text-black px-5 py-3 rounded-full font-semibold shadow hover:opacity-90"
                   >
-                    Lihat Catalog
+                    Tentang
                   </Link>
                   <Link
                     href="/Contact"
